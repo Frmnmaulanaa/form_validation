@@ -61,6 +61,9 @@ class _MyFormState extends State<MyForm> {
                   if (value!.isEmpty) {
                     return 'Password harus diisi';
                   }
+                  if (value.length < 6) {
+                    return 'Password minimal 6 karakter';
+                  }
                   return null;
                 },
                 onSaved: (value) {
